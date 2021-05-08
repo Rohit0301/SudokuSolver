@@ -1,0 +1,9 @@
+MuiGrid-root.board.MuiGrid-direction-xs-column {
+    
+    width: fit-content;
+    flex-direction: row;
+    /* padding: 0; */
+}
+.MuiGrid-root.rowboard.MuiGrid-container.MuiGrid-direction-xs-column {
+    display: block;
+}

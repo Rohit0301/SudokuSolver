@@ -1,0 +1,44 @@
+p.MuiTypography-root.heading.MuiTypography-body1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 2rem;
+  color: #3f3697;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.solve {
+  background-color: #34656d;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color:white;
+  font-size: 1.1rem;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.clear {
+  background-color: dimgrey;
+  font-size: 1.1rem;
+  color: white;
+  margin-top:1rem;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.generate {
+    color: white;
+    background-color: black;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+.MuiInputLabel-outlined {
+  z-index: 1;
+  transform: translate(14px, 8px) scale(1);
+  pointer-events: none;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.Verify {
+    font-size: 1.1rem;
+    background-color: #289672;
+    margin-top: 1rem;
+    margin-right:1rem;
+    color: white;
+}
+p.MuiTypography-root.message.MuiTypography-body1 {
+  font-size: 2rem;
+  padding-top: 1rem;
+  font-weight: 700;
+}
