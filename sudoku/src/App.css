@@ -8,6 +8,7 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.solve {
   background-color: #34656d;
   margin-top: 1rem;
   margin-right: 1rem;
+  margin-left: 1rem;
   color:white;
   font-size: 1.1rem;
 }
@@ -16,12 +17,14 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.clear {
   font-size: 1.1rem;
   color: white;
   margin-top:1rem;
+ 
 }
 button.MuiButtonBase-root.MuiButton-root.MuiButton-text.generate {
     color: white;
     background-color: black;
     font-size: 1.1rem;
     margin-top: 1rem;
+    margin-right: 1rem;
     margin-right: 1rem;
 }
 .MuiInputLabel-outlined {
@@ -41,4 +44,7 @@ p.MuiTypography-root.message.MuiTypography-body1 {
   font-size: 2rem;
   padding-top: 1rem;
   font-weight: 700;
+}
+.MuiGrid-root.gridboard.MuiGrid-container {
+  margin-bottom: 2rem;
 }
