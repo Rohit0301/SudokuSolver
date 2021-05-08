@@ -32,9 +32,16 @@ function App() {
     const row=id[0];
     const col=id[1];
     const tempGrid=[...grid]
-    tempGrid[row][col]=event.target.value;
+    const data=event.target.value;
+    if((data>=1 && data<=9) || data==''){
+       tempGrid[row][col]=data
+       setMessage("");
+    }
+    else{
+      setMessage("Invalid Value !")
+    }  
     setgrid(tempGrid)
-    setMessage("");
+    
  }
 
  const handleDifficulty=(event)=>{
@@ -91,7 +98,7 @@ const handleClear=()=>{
      const sudokuboard={"sudoku":strGrid}
      e.preventDefault();
      axios.post('https://sudoku-application-backend.herokuapp.com/solvemysudoku/', sudokuboard)
-     .then(response =>(response['data']==="invalid")?setMessage('Invalid Board'):setStrGrid(response['data'].replaceAll('[','').replaceAll(']','').replaceAll(',','').replaceAll(' ','')));
+     .then(response =>(response['data']==="invalid")?setMessage('Invalid Board !'):setStrGrid(response['data'].replaceAll('[','').replaceAll(']','').replaceAll(',','').replaceAll(' ','')));
      
     }
  
@@ -116,7 +123,7 @@ const handleClear=()=>{
       <center>
        <Typography className="heading" >SUDOKU</Typography>   
       </center>
-      <Grid container className="gridboard">
+      <Grid container className="gridboard" >
         <Grid item xs={12} sm={12} lg={12} md={12}>
           <center>
             <Board grid={grid} handleChange={(event)=>handleChange(event)} />
@@ -124,7 +131,7 @@ const handleClear=()=>{
         </Grid>
         <Grid item xs={12} sm={12} lg={12} md={12}>
           <center>
-            <Typography className="message" style={{color:(message==="Invalid Board !")?"red":"green"}}>{message}</Typography>
+            <Typography className="message" style={{color:(message=="Correct Board !")?"green":"red"}}>{message}</Typography>
           <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="demo-simple-select-outlined-label">Difficulty</InputLabel>
         <Select
@@ -146,6 +153,7 @@ const handleClear=()=>{
           <Button className="solve" onClick={handleSolve}>Solve Sudoku</Button>
           <Button className="Verify" onClick={handleVerify}>Verify Sudoku</Button>
           <Button className="clear" onClick={handleClear}>Clear</Button>
+          <br></br>
           </center>
         </Grid>
       </Grid>
